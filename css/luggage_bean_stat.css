@@ -1,0 +1,42 @@
+/* ----------------------- */
+/* Stat Beans
+/* ----------------------- */
+
+.stat-card {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.stat-card_icon {
+  font-size: 5rem;
+}
+
+.stat-card_title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px #f1be48;
+}
+
+a.stat-card_button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+  color: #000000;
+  background: #f1be48;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: 1px solid #f1be48;
+  transition: all 300ms ease;
+}
+
+a.stat-card_button:hover,
+a.stat-card_button:focus {
+  background: #ffffff;
+}
+
+a.stat-card_button.external:after {
+  content: '' !important;
+  display: none !important;
+}

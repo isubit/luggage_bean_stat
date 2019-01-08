@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Code for the luggage_bean_stat feature.
+ */
+
+include_once 'luggage_bean_stat.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function luggage_bean_stat_theme($existing, $type, $theme, $path) {
+  $themes['bean__stat'] = array(
+    'template' => 'bean--stat',
+    'path' => drupal_get_path('module', 'luggage_bean_stat') . '/templates'
+  );
+
+  return $themes;
+}
+
+/*
+ * Implements hook_preprocess_html.
+ */
+function luggage_bean_stat_preprocess_html(&$vars) {
+  // Override suitcase_interim styles for this site.
+  drupal_add_css(drupal_get_path('module', 'luggage_bean_stat') . '/css/luggage_bean_stat.css', array('group' => 200));
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function luggage_bean_stat_form_bean_form_alter(&$form, &$form_state, $form_id) {
+  if($form['#bundle'] == "stat") {
+    // Hide default bean type field since it's confusing and editor won't change it.
+    $form['view_mode'] = array(
+      '#type' => 'hidden',
+    );
+    //Add better description to label
+    $form['label']['#description'] = t('This text will be used to name your card. Users of your site will not see this.');
+    //Add better description to title
+    $form['title']['#description'] = t('The large number at the top of the card. Stick to no more than 8 characters.');
+  }
+  drupal_add_js(drupal_get_path('module', 'luggage_bean_stat') . '/js/luggage_bean_stat.js');
+}
