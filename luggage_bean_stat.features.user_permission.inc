@@ -22,10 +22,7 @@ function luggage_bean_stat_user_default_permissions() {
   // Exported permission: 'delete any stat bean'.
   $permissions['delete any stat bean'] = array(
     'name' => 'delete any stat bean',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
+    'roles' => array(),
     'module' => 'bean',
   );
 
@@ -34,6 +31,7 @@ function luggage_bean_stat_user_default_permissions() {
     'name' => 'edit any stat bean',
     'roles' => array(
       'bean editor' => 'bean editor',
+      'content editor' => 'content editor',
     ),
     'module' => 'bean',
   );
@@ -42,6 +40,8 @@ function luggage_bean_stat_user_default_permissions() {
   $permissions['view any stat bean'] = array(
     'name' => 'view any stat bean',
     'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'bean editor' => 'bean editor',
       'content editor' => 'content editor',
     ),
