@@ -1,4 +1,5 @@
 name = luggage_bean_stat
+description = Highlight a fact or statistic with an icon, number, description, and button.
 core = 7.x
 package = Luggage
 version = 7.x-1.0
@@ -17,9 +18,11 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_stat_button
 features[field_base][] = field_stat_caption
+features[field_base][] = field_stat_color_variant
 features[field_base][] = field_stat_icon
 features[field_instance][] = bean-stat-field_stat_button
 features[field_instance][] = bean-stat-field_stat_caption
+features[field_instance][] = bean-stat-field_stat_color_variant
 features[field_instance][] = bean-stat-field_stat_icon
 features[user_permission][] = create any stat bean
 features[user_permission][] = delete any stat bean

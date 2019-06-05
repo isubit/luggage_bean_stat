@@ -22,7 +22,7 @@ function luggage_bean_stat_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'bean',
@@ -74,7 +74,7 @@ function luggage_bean_stat_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'bean',
@@ -131,6 +131,42 @@ function luggage_bean_stat_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'bean-stat-field_stat_color_variant'.
+  $field_instances['bean-stat-field_stat_color_variant'] = array(
+    'bundle' => 'stat',
+    'default_value' => array(
+      0 => array(
+        'value' => 'stat-bean_red',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Choose a color variant to coordinate with the background color. If this card will be on a red or dark background, choose White (which uses mostly white text). If it will be on a white or light background, choose Red (which uses red and black text). <br>
+<br><strong>This shouldn\'t need to be changed unless the page is redesigned or the card is moved. </strong>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_stat_color_variant',
+    'label' => 'Color Variant',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'bean-stat-field_stat_icon'.
   $field_instances['bean-stat-field_stat_icon'] = array(
     'bundle' => 'stat',
@@ -143,7 +179,7 @@ function luggage_bean_stat_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'bean',
@@ -166,6 +202,9 @@ function luggage_bean_stat_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Button');
   t('Caption');
+  t('Choose a color variant to coordinate with the background color. If this card will be on a red or dark background, choose White (which uses mostly white text). If it will be on a white or light background, choose Red (which uses red and black text). <br>
+<br><strong>This shouldn\'t need to be changed unless the page is redesigned or the card is moved. </strong>');
+  t('Color Variant');
   t('Icon');
   t('Show a button at the bottom of the Stat card.');
   t('Supporting text for the large title. Recommended length is no more than 150 characters.');

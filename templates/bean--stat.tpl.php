@@ -1,4 +1,4 @@
-<div class="stat-card">
+<div class="stat-card <?php if(isset($bean->field_stat_color_variant['und'][0]['value'])): print $bean->field_stat_color_variant['und'][0]['value']; endif; ?>">
   <?php print render($title_suffix) ?>
 
   <?php if (isset($bean->field_stat_icon['und'][0]['value'])): ?>
