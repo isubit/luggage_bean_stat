@@ -6,6 +6,11 @@
       <span class="fa <?php print $bean->field_stat_icon['und'][0]['value']; ?>"></span>
     </div>
   <?php endif; ?>
+  
+  <?php if (isset($bean->field_stat_image['und'][0]['uri'])): ?>
+    <div class="stat-card_image"><img src="<?php print file_create_url($bean->field_stat_image['und'][0]['uri']); ?>" alt="<?php print $bean->field_stat_image['und'][0]['alt']; ?>" />
+    </div>
+  <?php endif; ?>
 
   <div class="stat-card_content">
 
